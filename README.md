@@ -14,17 +14,17 @@ Various structures for use in microcontrollers:  a poor man's 'dynamic' allocati
 3. Find Arduino examples in examples/
 
 ## Current Features
-1. Array: staticly/dynamicly allocated array with standard features.
-2. Vector: staticly/dynamicly allocated array with standard features.
+* Array: staticly/dynamicly allocated array with standard features.
+* Vector: staticly/dynamicly allocated array with standard features.
 
 ## Planned Features
-- Memorypool layer (provide scratchpad that can be defragmented if needed or throws 'exception')
-- Prioritypool layer (keep this memory alive at all costs)
-- Memory exception handling
-- Overload functions like malloc(), calloc(), free(), new() and delete() to use a memorypool provide adapted containers.
+* Memorypool layer (provide scratchpad that can be defragmented if needed or throws 'exception')
+* Prioritypool layer (keep this memory alive at all costs)
+* Memory exception handling
+* Overload functions like malloc(), calloc(), free(), new() and delete() to use a memorypool provide adapted containers.
 
 ## Known Problems
-- iterators are not mere pointer iterators, and therefore on the heavy side
+* iterators are not mere pointer iterators, and therefore on the heavy side
 
 ## References
 
