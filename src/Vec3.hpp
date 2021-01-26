@@ -4,7 +4,7 @@
 #include <cmath>
 
 /*
- * Eucleudian point
+ * Euclidean point (x, y, z)
  */
 
 template <typename T>
