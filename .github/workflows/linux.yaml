@@ -1,6 +1,6 @@
 name: linux
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   arduino_ci:
