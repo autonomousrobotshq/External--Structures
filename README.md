@@ -16,6 +16,7 @@ Various structures for use in microcontrollers:  a poor man's 'dynamic' allocati
 ## Current Features
 * Array: staticly/dynamicly allocated array with standard features.
 * Vector: staticly/dynamicly allocated array with standard features.
+* Vec3 & Vec2: Simple containers for various point/matrix calculations.
 
 ## Planned Features
 * Memorypool layer (provide scratchpad that can be defragmented if needed or throws 'exception')
