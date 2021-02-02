@@ -1,7 +1,7 @@
 #ifndef VEC3_HPP
 #define VEC3_HPP
 
-#include <cmath>
+#include <math.h>
 
 /*
  * Euclidean point (x, y, z)
@@ -18,11 +18,11 @@ class Vec3 {
 	  	~Vec3() {}
 
 		Vec3	&operator=(const Vec3 & other) { x = other.x; y = other.y; z = other.z; return *this; }
-	    Vec3	&operator+(const Vec3 & other) const { return Vec3(x + other.x, y + other.y, z + other.z); }
-	    Vec3	&operator-(const Vec3 & other) const { return Vec3(x - other.x, y - other.y, z - other.z); }
-	    Vec3	&operator*(const Vec3 & other) const { return Vec3(x * other.x, y * other.y, z * other.z); }
-	    Vec3	&operator/(const Vec3 & other) const { return Vec3(x / other.x, y / other.y, z / other.z); }
-	    Vec3	&operator%(const Vec3 & other) const { return Vec3(x % other.x, y % other.y, z % other.z); }
+	    Vec3	operator+(const Vec3 & other) const { return Vec3<T>(x + other.x, y + other.y, z + other.z); }
+	    Vec3	operator-(const Vec3 & other) const { return Vec3<T>(x - other.x, y - other.y, z - other.z); }
+	    Vec3	operator*(const Vec3 & other) const { return Vec3<T>(x * other.x, y * other.y, z * other.z); }
+	    Vec3	operator/(const Vec3 & other) const { return Vec3<T>(x / other.x, y / other.y, z / other.z); }
+	    Vec3	operator%(const Vec3 & other) const { return Vec3<T>(x % other.x, y % other.y, z % other.z); }
 	    bool	operator==(const Vec3 & other) const { return (x == other.x && y == other.y && z == other.z); }
 	    bool	operator!=(const Vec3 & other) const { return (x != other.x || y != other.y || z != other.z); }
 
@@ -30,8 +30,8 @@ class Vec3 {
 		void	Substract(const Vec3 & other) { x -= other.x; y -= other.y; z -= other.z; }
 		void	ScalarMultiplication(T s) { x *= s; y *= s; z *= s; }
 		T		Mag() const { return sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2)); }
-		void	Normalize() { T mag = sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2)); x /= mag; y /= mag; z /= mag; }
-		Vec3	&Dot(const Vec3 & other) const { Vec3(x * other.x, y * other.y, z * other.z); }
+		void	Normalize() { T mag = this->Mag(); x /= mag; y /= mag; z /= mag; }
+		Vec3	Dot(const Vec3 & other) const { return Vec3<T>(x * other.x, y * other.y, z * other.z); }
 };
 
 #endif
