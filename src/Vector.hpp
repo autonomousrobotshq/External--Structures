@@ -1,6 +1,7 @@
 #ifndef VECTOR_HPP
 #define VECTOR_HPP
 
+#include <stddef.h>
 #include <Array.hpp>
 
 /*******************************************************************************
